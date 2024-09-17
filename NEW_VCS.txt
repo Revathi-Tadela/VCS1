@@ -1,0 +1,193 @@
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops (master)
+$ mkdir VCS
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops (master)
+$ cd VCS
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS (master)
+$ mkdir my-project
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS (master)
+$ cd my-project
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ echo "print('Hello, World!')" > script1.py 
+echo "print('Hello, World'c:/Users/revat/OneDrive/Desktop/Guvi-Devops/docker-compose.yaml')" > script1.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ echo "echo 'Hello, World!'" > script2.sh
+echo "echo 'Hello, World'c:/Users/revat/OneDrive/Desktop/Guvi-Devops/docker-compose.yaml'" > script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)
+$ ls -lrt
+total 2
+-rw-r--r-- 1 revat 197609 86 Sep 18 00:48 script1.py
+-rw-r--r-- 1 revat 197609 84 Sep 18 00:48 script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)
+$ git init
+Initialized empty Git repository in C:/Users/revat/OneDrive/Desktop/Guvi-Devops/VCS/my-project/.git/
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git add .
+warning: in the working copy of 'script1.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'script2.sh', LF will be replaced by CRLF the next time Git touches it
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git commit -m "Initial commit"
+[master (root-commit) e5b29d8] Initial commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 script1.py
+ create mode 100644 script2.sh
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git checkout
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git checkout master
+Already on 'master'
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git remote add origin https://github.com/Revathi-Tadela/your-repo.git
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git push -u origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/Revathi-Tadela/your-repo.git/' not found
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git remote add origin https://github.com/Revathi-Tadela/my-project.git
+error: remote origin already exists.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git remote add origin https://github.com/Revathi-Tadela/my-project.git
+error: remote origin already exists.^C
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)    
+  
+$ git remote add origin https://github.com/Revathi-Tadela/my-project.git
+error: remote origin already exists.^C
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git remote set-url origin https://github.com/Revathi-Tadela/my-project.git
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git remote -v
+origin  https://github.com/Revathi-Tadela/my-project.git (fetch)
+origin  https://github.com/Revathi-Tadela/my-project.git (push)
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads     
+Compressing objects: 100% (4/4), done.       
+Writing objects: 100% (4/4), 415 bytes | 207.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Revathi-Tadela/my-project.git
+ * [new branch]      master -> master        
+branch 'master' set up to track 'origin/master'.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git checkout -b new-feature
+Switched to a new branch 'new-feature'
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (new-feature) 
+$ echo "print('Feature added')" > script3.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (new-feature) 
+$ git add script3.py
+warning: in the working copy of 'script3.py', LF will be replaced by CRLF the next time Git touches it
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (new-feature) 
+$ git commit -m "Add new feature"
+[new-feature 70255eb] Add new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 script3.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (new-feature) 
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git merge new-feature
+Updating e5b29d8..70255eb
+Fast-forward
+ script3.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 script3.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ echo "print('Rebase example')" > script4.py
+ 
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git add script4.py
+warning: in the working copy of 'script4.py', LF will be replaced by CRLF the next time Git touches it
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git commit -m "Add rebase example"
+[master 6656a33] Add rebase example
+ 1 file changed, 1 insertion(+)
+ create mode 100644 script4.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ echo "print('Master change')" > script1.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git add script1.py
+warning: in the working copy of 'script1.py', LF will be replaced by CRLF the next time Git touches it
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git commit -m "Update script1 on master"
+[master 8b65b6f] Update script1 on master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git checkout rebase-feature
+error: pathspec 'rebase-feature' did not match any file(s) known to git
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git rebase master
+Current branch master is up to date.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git rebase --continue
+fatal: no rebase in progress
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ echo "print('Temporary change')" > script5.py
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git stash
+No local changes to save
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git stash list
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git stash apply
+No stash entries found.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$ git stash drop
+No stash entries found.
+
+revat@LAPTOP-UKE489SP MINGW64 ~/OneDrive/Desktop/Guvi-Devops/VCS/my-project (master)      
+$
